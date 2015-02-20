@@ -25,14 +25,14 @@ The data and labels were loaded into R. The identifier column names were given m
 
 The test and training data sets were merged together into a single data frame including the activity and subject column. The next step was to create a summarising data frame that displayed only mean and standard deviation data , filtered by searching the column names for "std" and "mean". These filtered columns were combined with the identifier columns to create a new data frame. 
 
-The numeric labels for activities were converted to descriptive ones using the map values function and activity_labels text file. They were then tidied up by changing the characters to lower case and replacing underscores with spaces which produced the following labels.
+The numeric labels for activities were converted to descriptive ones using the map values function and activity_labels text file. 
 
-1. walking  
-2. walking upstairs  
-3. walking downstairs  
-4. sitting  
-5. standing  
-6. laying  
+1. WALKING  
+2. WALKING_UPSTAIRS
+3. WALKING_DOWNSTAIRS
+4. SITTING  
+5. STANDING  
+6. LAYING  
 
 Then an independent tidy data frame was created using the aggretate function with the average of each variable for each activity and each subject. As a result of aggregating, new columns were made making some of the old ones unneccessary. The old ones were deleted and the new ones were renamed.
 
