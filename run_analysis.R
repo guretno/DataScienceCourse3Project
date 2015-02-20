@@ -5,9 +5,10 @@ library(plyr)
 # check if a data folder exists; if not then create one
 if (!file.exists("data")) {dir.create("data")}
 
-# download the file & manually unzip
+# download the file & unzip
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileUrl, "./data/project_activity.zip")
+unzip("./data/project_activity.zip", exdir = "./data/project_activity")
 
 # read in the data for test
 test <- read.table("./data/project_activity/UCI HAR Dataset/test/X_test.txt")
